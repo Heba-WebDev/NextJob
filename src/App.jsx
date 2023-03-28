@@ -1,5 +1,13 @@
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
 }
 
 export default App;
