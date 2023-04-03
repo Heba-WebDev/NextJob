@@ -20,20 +20,22 @@ export default function Job({
   const imageSrc = `src/assets/images/${logo}`;
   return (
     <section className="container mx-auto flex justify-between">
-      <div className="flex gap-3 items-center px-3">
+      <div className="flex gap-3 items-center p-3">
         <div>
           <img src={imageSrc} alt="" />
         </div>
-        <div>
-          <div className="flex gap-1">
-            <strong>{company}</strong>
-            {newnew && <New />}
-            {featured && <Featured />}
+        <div className="grid gap-1">
+          <div className="flex gap-3">
+            <strong className="text-teal-500 text-sm">{company}</strong>
+            <div className="flex gap-1">
+              {newnew && <New />}
+              {featured && <Featured />}
+            </div>
           </div>
           <div>
-            <h2>{position}</h2>
+            <h2 className="font-semibold text-xl">{position}</h2>
           </div>
-          <div className="flex gap-2 text-gray-400 items-center">
+          <div className="flex gap-2 text-gray-400 items-center text-sm">
             <span>{postedAt}</span>
             <span>.</span>
             <span>{contract}</span>
@@ -43,7 +45,7 @@ export default function Job({
         </div>
       </div>
       <div className="flex gap-2 items-center px-4">
-        <span>{role}</span>
+        <Requirement requirement={role} />
         <span>{level}</span>
         {languages &&
           languages.map((requirement) => {

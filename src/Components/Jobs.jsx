@@ -14,6 +14,7 @@ export default function Jobs() {
             <Job
               logo={job.logo}
               title={job.title}
+              company={job.company}
               newnew={job.new}
               featured={job.featured}
               position={job.position}
