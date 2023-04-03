@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="container mx-auto text-center py-6">
+    <section className="container mx-auto text-center py-6 mt-6">
       <h1 className="text-4xl font-bold py-2 pt-6">
         Find your dream job with Jobster!
       </h1>
