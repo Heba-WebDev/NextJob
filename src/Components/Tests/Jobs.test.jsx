@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { describe, expect, expectTypeOf, it } from 'vitest';
 import Jobs from '../Jobs';
 import Job from '../Job';

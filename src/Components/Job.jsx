@@ -19,12 +19,14 @@ export default function Job({
 }) {
   const imageSrc = `src/assets/images/${logo}`;
   return (
-    <section className="container mx-auto flex justify-between">
-      <div className="flex gap-3 items-center p-3">
-        <div>
-          <img src={imageSrc} alt="" />
-        </div>
-        <div className="grid gap-1">
+    <section className="container mx-auto flex flex-col lg:flex-row justify-between">
+      <div className="relative flex flex-col lg:flex-row gap-3 md:col-span-1 lg:items-center py-3 lg:p-3">
+        <img
+          className=" w-14 self-start lg:self-auto absolute lg:relative w-14 lg:w-auto top-[-28%] lg:top-0"
+          src={imageSrc}
+          alt=""
+        />
+        <div className="grid gap-1 lg:gap-0 lg:w-auto py-2 lg:py-0">
           <div className="flex gap-3">
             <strong className="text-teal-500 text-sm">{company}</strong>
             <div className="flex gap-1">
@@ -33,7 +35,7 @@ export default function Job({
             </div>
           </div>
           <div>
-            <h2 className="font-semibold text-xl">{position}</h2>
+            <h2 className="font-semibold text-xl py-1 lg:py-0">{position}</h2>
           </div>
           <div className="flex gap-2 text-gray-400 items-center text-sm">
             <span>{postedAt}</span>
@@ -44,7 +46,8 @@ export default function Job({
           </div>
         </div>
       </div>
-      <div className="flex gap-2 items-center px-4">
+      <hr className="md:hidden py-2" />
+      <div className="flex flex-wrap gap-2 items-center md:px-4">
         <Requirement requirement={role} />
         <span>{level}</span>
         {languages &&

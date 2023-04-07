@@ -5,7 +5,7 @@ import { RxMagnifyingGlass } from 'react-icons/rx';
 
 export default function Navbar() {
   return (
-    <nav className="container mx-auto flex justify-between py-6 font-medium">
+    <nav className="container mx-auto flex justify-between py-6 px-2 md:px-0 font-medium">
       <div className="flex items-center gap-1">
         <FcBriefcase size="30" />
         <span className="font-bold text-teal-800 text-lg">Jobster</span>
